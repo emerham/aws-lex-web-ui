@@ -14,7 +14,7 @@
       contain
       height="33vh"
     ></v-card-media>
-    <v-card-actions class="button-row">
+    <v-card-actions class="button-row" v-if="show">
       <v-btn
         v-for="(button) in responseCard.buttons"
         v-if="button.text && button.value"
@@ -22,6 +22,7 @@
         v-bind:disabled="hasButtonBeenClicked"
         round
         default
+        flat
       >
         {{button.text}}
       </v-btn>
@@ -59,6 +60,7 @@ export default {
   data() {
     return {
       hasButtonBeenClicked: false,
+      show: true,
     };
   },
   computed: {
@@ -69,11 +71,11 @@ export default {
   methods: {
     onButtonClick(value) {
       this.hasButtonBeenClicked = true;
+      this.show = false;
       const message = {
         type: 'human',
         text: value,
       };
-
       this.$store.dispatch('postTextMessage', message);
     },
   },
@@ -104,6 +106,11 @@ export default {
   margin: 10px !important;
   font-size: 12px !important;
   min-width: 44px !important;
+  color: #fff;
+  background-color: #d73f09 !important;
+  -webkit-border-radius: 24px;
+  -moz-border-radius: 24px;
+  border-radius: 24px;
 }
 
 .card__actions.button-row {

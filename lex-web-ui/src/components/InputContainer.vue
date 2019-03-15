@@ -3,10 +3,9 @@
     <v-layout
       row
       justify-space-between
-      ma-0
       class="input-container"
     >
-      <v-toolbar color="white" dense>
+      <v-toolbar id="input-toolbar" flat dense>
         <!--
           using v-show instead of v-if to make recorder-status transition work
         -->
@@ -20,6 +19,7 @@
           id="text-input"
           name="text-input"
           single-line
+          class="osu-solo"
           hide-details
         ></v-text-field>
 
@@ -43,10 +43,10 @@
           v-on="tooltipEventHandlers"
           v-bind:disabled="isSendButtonDisabled"
           ref="send"
-          class="black--text input-button"
+          class="beaver--text input-button"
           icon
         >
-          <v-icon medium>send</v-icon>
+          <v-icon medium>arrow_forward</v-icon>
         </v-btn>
         <v-btn
           v-else
@@ -249,8 +249,36 @@ export default {
 };
 </script>
 <style>
-.footer {
-  /* make footer same height as dense toolbar */
-  min-height: 48px;
-}
+ .footer {
+   /* make footer same height as dense toolbar */
+   min-height: 48px;
+   margin-bottom: 1em;
+ }
+ .beaver--text {
+   color: #D73F09 !important;
+ }
+  .osu-solo {
+    border: 1px solid #E9E5E4;
+    box-sizing: border-box;
+    border-radius: 8px;
+    background-color: #fff;
+    min-height: 48px;
+  }
+  .osu-solo label {
+    top: 10px !important;
+    padding: 0 20px;
+    color: #8f8582 !important;
+  }
+ .toolbar .input-group__details {
+   display: none;
+ }
+  .osu-solo #text-input {
+    height: auto;
+    padding: 0 20px;
+  }
+  @media only screen and (max-width: 350px) {
+    .osu-solo {
+      margin-left: 0 !important;
+    }
+  }
 </style>

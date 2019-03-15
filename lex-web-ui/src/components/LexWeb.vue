@@ -17,6 +17,9 @@
         <message-list v-show="!isUiMinimized"
         ></message-list>
       </v-container>
+      <v-container class="response-card-container" fluid pa-0>
+
+      </v-container>
     </v-content>
 
     <input-container
@@ -354,10 +357,21 @@ export default {
 </script>
 
 <style>
+  .chat-benny {
+    text-align: center;
+    color: #696361;
+    margin-top: 10px;
+  }
 .message-list-container {
   /* vuetify toolbar and footer are 48px each when using 'dense' */
-  height: calc(100% - 96px);
+  height: calc(100% - 10rem);
   position: fixed;
-  top: 48px;
+  top: 75px;
 }
+  .application.theme--light {
+    background: #f7f5f5;
+  }
+  .message-bot .message-text a {
+    color: #d73f09;
+  }
 </style>

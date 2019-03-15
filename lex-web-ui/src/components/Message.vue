@@ -213,7 +213,7 @@ export default {
   border-radius: 50%;
   min-width: calc(2.5em + 1.5vmin);
   min-height: calc(2.5em + 1.5vmin);
-  align-self: flex-start;
+  align-self: flex-end;
   margin-right: 4px;
 }
 
@@ -238,11 +238,23 @@ export default {
 }
 
 .message-bot .message-bubble {
-  background-color: #FFEBEE; /* red-50 from material palette */
+  background-color: #fff;
+  color: #000;
+  margin-bottom: 1.4rem;
+  -webkit-border-radius: 24px 24px 24px 0;
+  -moz-border-radius: 24px 24px 24px 0;
+  border-radius: 24px 24px 24px 0;
+}
+.message-bot .message-bubble a  {
+  color: #d73f09 !important;
 }
 
 .message-human .message-bubble {
-  background-color: #E8EAF6; /* indigo-50 from material palette */
+  color: #fff;
+  background-color: #d73f09;
+  -webkit-border-radius: 24px 24px 0 24px;
+  -moz-border-radius: 24px 24px 0 24px;
+  border-radius: 24px 24px 0 24px;
 }
 
 .dialog-state {
@@ -263,5 +275,7 @@ export default {
 .response-card {
   justify-content: center;
   width: 85vw;
+  /*position: absolute;*/
+  /*bottom: 9rem;*/
 }
 </style>

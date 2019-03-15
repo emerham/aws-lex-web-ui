@@ -1,12 +1,13 @@
 <template>
   <v-toolbar
+    height="75"
     v-bind:color="toolbarColor"
     app
-    dark
-    dense
+    light
     fixed
+    flat
   >
-    <img v-if="toolbarLogo" v-bind:src="toolbarLogo"/>
+    <img height="45" v-if="toolbarLogo" v-bind:src="toolbarLogo"/>
 
     <v-menu v-if="isEnableLogin" offset-y>
 
@@ -45,6 +46,29 @@
     >
       <span id="min-max-tooltip">{{toolTipMinimize}}</span>
     </v-tooltip>
+      <v-toolbar-items class="toolbar-icons hidden-xs-and-down">
+        <v-btn
+          icon
+          target="_blank"
+          href="https://search.oregonstate.edu/"
+          v-ripple="false"
+        >
+          <v-icon
+            color="#8F8582"
+            medium="true"
+          >
+            {{ 'search' }}
+          </v-icon>
+        </v-btn>
+        <v-btn icon v-ripple="false">
+          <v-icon
+            color="#8F8582"
+            medium="true"
+          >
+            {{ 'help_outline' }}
+          </v-icon>
+        </v-btn>
+      </v-toolbar-items>
     <v-btn
       v-if="$store.state.isRunningEmbedded"
       v-on:click="toggleMinimize"
@@ -126,3 +150,10 @@ export default {
   },
 };
 </script>
+<style>
+  .btn--active .btn__content:before,
+  .btn:focus .btn__content:before,
+  .btn:hover .btn__content:before {
+    background-color: unset;
+  }
+</style>
