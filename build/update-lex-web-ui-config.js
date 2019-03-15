@@ -18,12 +18,14 @@ const config = require('../config');
   'BOT_INITIAL_TEXT',
   'BOT_INITIAL_SPEECH',
   'IFRAME_ORIGIN',
+  'PLACEHOLDER_TEXT',
   'PARENT_ORIGIN',
   'POOL_ID',
   'APP_USER_POOL_CLIENT_ID',
   'APP_DOMAIN_NAME',
   'UI_TOOLBAR_TITLE',
   'UI_TOOLBAR_LOGO',
+  'USE_VOICE',
 ].forEach(function (envVar) {
   console.log('[INFO] Env var - %s: [%s]', envVar, process.env[envVar]);
 });

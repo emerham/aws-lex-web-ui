@@ -1,6 +1,6 @@
 {
   "cognito": {
-    "poolId": "us-east-1:389f9063-82a0-4a8c-bdc3-3bbb4c3d36d0",
+    "poolId": "us-east-1:106816e0-450a-4890-a6cc-0187f8da5a60",
     "appUserPoolClientId": "",
     "appUserPoolName": "",
     "appDomainName": "",
@@ -9,23 +9,30 @@
   "lex": {
     "botName": "OrderFlowers",
     "botAlias": "$LATEST",
-    "initialText": "You can ask me for help ordering flowers. Just type \"Buy flowers\" or click on the mic and say it.",
-    "initialSpeechInstruction": "Say 'Buy Flowers' to get started.",
+    "initialText": "You are now chatting with Benny",
+    "initialSpeechInstruction": "Ask me anything",
     "reInitSessionAttributesOnRestart": false
   },
   "ui": {
     "parentOrigin": "",
-    "toolbarTitle": "Order Flowers",
-    "toolbarLogo": "",
+    "toolbarTitle": "",
+    "toolbarLogo": "/logo.svg",
     "enableLogin": false,
-    "AllowSuperDangerousHTMLInMessage": false,
+    "AllowSuperDangerousHTMLInMessage": true,
     "shouldDisplayResponseCardTitle": false,
-    "pushInitialTextOnRestart": false
+    "textInputPlaceholder": "Type here or click on the mic",
+    "pageTitle": "Benny",
+    "toolbarTheme": "light",
+    "toolbarColor": "white",
+    "avatarImageUrl": "/Mask%20Group.png",
+    "pushInitialTextOnRestart": false,
+    "showDialogStateIcon": false
   },
   "polly": {
     "voiceId": "Salli"
   },
   "recorder": {
+    "enable": true,
     "preset": "speech_recognition"
   },
   "iframe": {

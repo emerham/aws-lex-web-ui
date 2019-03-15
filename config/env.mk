@@ -28,3 +28,6 @@ export UI_TOOLBAR_LOGO ?= $()
 
 export IFRAME_ORIGIN ?= $()
 export PARENT_ORIGIN ?= $()
+
+export USE_VOICE ?= true
+export PLACEHOLDER_TEXT ?= Type here or click on the mic

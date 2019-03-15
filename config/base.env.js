@@ -22,9 +22,12 @@ module.exports = {
     enableLogin: (process.env.ENABLE_LOGIN === undefined) ? undefined : (process.env.ENABLE_LOGIN === 'true') ? true : false,
     AllowSuperDangerousHTMLInMessage: (process.env.ENABLE_MARKDOWN_SUPPORT === undefined) ? undefined : (process.env.ENABLE_MARKDOWN_SUPPORT === 'true') ? true : false,
     shouldDisplayResponseCardTitle: (process.env.SHOW_RESPONSE_CARD_TITLE === undefined) ? undefined : (process.env.SHOW_RESPONSE_CARD_TITLE === 'true') ? true : false,
+    textInputPlaceholder: process.env.PLACEHOLDER_TEXT,
   },
   polly: {},
-  recorder: {},
+  recorder: {
+    enable: (process.env.USE_VOICE === undefined) ? undefined : (process.env.USE_VOICE === 'true'),
+  },
   iframe: {
     iframeOrigin: process.env.IFRAME_ORIGIN,
     shouldLoadIframeMinimized: (process.env.IFRAME_LOAD_MINIMIZED === undefined) ? undefined : (process.env.IFRAME_LOAD_MINIMIZED === 'true') ? true : false,
