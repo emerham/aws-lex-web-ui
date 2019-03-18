@@ -1,10 +1,10 @@
 <template>
-  <v-flex d-flex class="message">
+  <v-flex class="message">
     <!-- contains message and response card -->
     <v-layout column ma-2 class="message-layout">
 
       <!-- contains message bubble and date -->
-      <v-flex d-flex class="message-bubble-date-container">
+      <v-flex class="message-bubble-date-container">
         <v-layout column class="message-bubble-column">
 
           <!-- contains message bubble and avatar -->
@@ -200,12 +200,14 @@ export default {
 </script>
 
 <style scoped>
+.message {
+  max-width: 100%;
+}
+.message-layout {
+  max-width: 80%;
+}
 .message, .message-bubble-column {
   flex: 0 0 auto;
-}
-
-.message, .message-bubble-row {
-  max-width: 80vw;
 }
 
 .bot-avatar {
@@ -223,7 +225,9 @@ export default {
   font-size: calc(1em + 0.25vmin);
   padding: 0 12px;
   width: fit-content;
+  min-width: 140px;
   align-self: center;
+  border: 1px solid #D4CFCD;
 }
 
 .focusable {
@@ -241,9 +245,9 @@ export default {
   background-color: #fff;
   color: #000;
   margin-bottom: 1.4rem;
-  -webkit-border-radius: 24px 24px 24px 0;
-  -moz-border-radius: 24px 24px 24px 0;
-  border-radius: 24px 24px 24px 0;
+  -webkit-border-radius: 16px 16px 16px 0px;
+  -moz-border-radius: 16px 16px 16px 0px;
+  border-radius: 16px 16px 16px 0px;
 }
 .message-bot .message-bubble a  {
   color: #d73f09 !important;
@@ -252,9 +256,9 @@ export default {
 .message-human .message-bubble {
   color: #fff;
   background-color: #d73f09;
-  -webkit-border-radius: 24px 24px 0 24px;
-  -moz-border-radius: 24px 24px 0 24px;
-  border-radius: 24px 24px 0 24px;
+  -webkit-border-radius: 16px 16px 0px 16px;
+  -moz-border-radius: 16px 16px 0px 16px;
+  border-radius: 16px 16px 0px 16px;
 }
 
 .dialog-state {
@@ -275,6 +279,7 @@ export default {
 .response-card {
   justify-content: center;
   width: 85vw;
+  max-width: 100%;
   /*position: absolute;*/
   /*bottom: 9rem;*/
 }

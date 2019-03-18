@@ -106,11 +106,15 @@ export default {
   margin: 10px !important;
   font-size: 12px !important;
   min-width: 44px !important;
-  color: #fff;
   background-color: #d73f09 !important;
   -webkit-border-radius: 24px;
   -moz-border-radius: 24px;
   border-radius: 24px;
+  text-transform: none;
+}
+
+.btn >>> {
+  color: #fff !important;
 }
 
 .card__actions.button-row {

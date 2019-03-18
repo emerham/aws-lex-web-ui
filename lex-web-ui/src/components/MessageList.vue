@@ -68,6 +68,7 @@ export default {
 .message-list {
   overflow-y: auto;
   overflow-x: hidden;
+  max-width: 768px;
 }
 
 .message-bot {

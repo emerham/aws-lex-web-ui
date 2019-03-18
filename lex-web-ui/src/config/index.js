@@ -55,12 +55,12 @@ const configDefault = {
   cognito: {
     // Cognito pool id used to obtain credentials
     // e.g. poolId: 'us-east-1:deadbeef-cac0-babe-abcd-abcdef01234',
-    poolId: '',
+    poolId: 'us-east-1:106816e0-450a-4890-a6cc-0187f8da5a60',
   },
 
   lex: {
     // Lex bot name
-    botName: 'WebUiOrderFlowers',
+    botName: 'Benny',
 
     // Lex bot alias/version
     botAlias: '$LATEST',

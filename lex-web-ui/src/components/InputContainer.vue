@@ -2,7 +2,7 @@
   <v-footer app fixed>
     <v-layout
       row
-      justify-space-between
+      justify-center
       class="input-container"
     >
       <v-toolbar id="input-toolbar" flat dense>
@@ -249,29 +249,36 @@ export default {
 };
 </script>
 <style>
- .footer {
-   /* make footer same height as dense toolbar */
-   min-height: 48px;
-   margin-bottom: 1em;
- }
- .beaver--text {
-   color: #D73F09 !important;
- }
+  .footer {
+    /* make footer same height as dense toolbar */
+    min-height: 48px;
+    margin-bottom: 1em;
+    background-color: transparent !important;
+  }
+  #input-toolbar {
+    max-width: 768px;
+    background-color: transparent !important;
+  }
+  .beaver--text {
+    color: #D73F09 !important;
+    margin-right: 8px !important;
+  }
   .osu-solo {
     border: 1px solid #E9E5E4;
     box-sizing: border-box;
     border-radius: 8px;
     background-color: #fff;
     min-height: 48px;
+    margin-left: 16px !important;
   }
   .osu-solo label {
     top: 10px !important;
     padding: 0 20px;
     color: #8f8582 !important;
   }
- .toolbar .input-group__details {
-   display: none;
- }
+  .toolbar .input-group__details {
+    display: none;
+  }
   .osu-solo #text-input {
     height: auto;
     padding: 0 20px;
